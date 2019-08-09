@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.dao.UserMapper;
 import com.example.demo.entity.User;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ public class UserController {
 
     @GetMapping("/user")
     public List<User> findAll() {
-        return null;
+        return userMapper.getAllUser();
     }
 
     @GetMapping("/user/{userId}")
