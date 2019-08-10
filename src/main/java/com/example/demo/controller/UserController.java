@@ -29,7 +29,7 @@ public class UserController {
     }
 
     @PutMapping("/user/{userId}")
-    public void updateUser(@RequestBody User user,@PathVariable int userId) {
+    public void updateUser(@RequestBody User user,@PathVariable long userId) {
     }
 
     @DeleteMapping("/user/{userId}")
